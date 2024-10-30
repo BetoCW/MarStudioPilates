@@ -1,0 +1,342 @@
+<?php
+session_start(); // Iniciar sesión para verificar si el usuario está logueado
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="animate-page.css">
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            Mar Studio Pilates
+            <img src="images/cropped_pilates_header.png" alt="Logo" class="navbar-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="perfil.php">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="php/logout.php">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="jumbotron text-center animate-page">
+        <h1 class="display-4 animate-title">SE PARTE DE ESTE ESTUDIO</h1>
+        <p class="lead animate-paragraph">Estudio de pilates</p>
+        <a class="btn btn-primary btn-lg animate-btn" href="#" role="button">Iniciar Sesión</a>
+    </header>
+
+    <!-- Contenido Principal: Cards por Paquete -->
+    <div class="container mt-5 animate-page">
+        <div class="row">
+            <!-- Reformer Paquetes -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 1 Sesión</h3>
+                        <p class="lead">$127.00</p>
+                        <a 
+                            class="btn btn-secondary btn-lg animate-btn" 
+                            href="<?php echo isset($_SESSION['usuario']) ? 'perfil.php' : 'login.html'; ?>" 
+                            role="button">Reservar Paquete 1
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 3 Sesiones</h3>
+                        <p class="lead">$340.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 5 Sesiones</h3>
+                        <p class="lead">$580.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 8 Sesiones</h3>
+                        <p class="lead">$860.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 4</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 10 Sesiones</h3>
+                        <p class="lead">$1097.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 4</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 12 Sesiones</h3>
+                        <p class="lead">$1297.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 4</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 15 Sesiones</h3>
+                        <p class="lead">$1597.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 4</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Reformer - 1 Sesion Diaria</h3>
+                        <p class="lead">$2497.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 4</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- P&B Paquetes -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 1 Sesiones</h3>
+                        <p class="lead">$99.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 1</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 animate-table">
+                        <div class="card-body text-center">
+                            <h3 class="animate-title">P&B - 3 Sesiones</h3>
+                            <p class="lead">$250.00</p>
+                            <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 1</a>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 5 Sesiones</h3>
+                        <p class="lead">$450.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 8 Sesiones</h3>
+                        <p class="lead">$750.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 10 Sesiones</h3>
+                        <p class="lead">$890.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 12 Sesiones</h3>
+                        <p class="lead">$997.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 15 Sesiones</h3>
+                        <p class="lead">$1250.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">P&B - 1 Sesion Diaria</h3>
+                        <p class="lead">$1997.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Barre Paquetes -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Barre - 2 Sesión</h3>
+                        <p class="lead">$220.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 1</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Barre - 6 Sesiones</h3>
+                        <p class="lead">$520.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 animate-table">
+                    <div class="card-body text-center">
+                        <h3 class="animate-title">Barre - 10 Sesiones</h3>
+                        <p class="lead">$897.00</p>
+                        <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 animate-table">
+                <div class="card-body text-center">
+                    <h3 class="animate-title">Barre - 16 Sesiones</h3>
+                    <p class="lead">$1350.00</p>
+                    <a class="btn btn-secondary btn-lg animate-btn" href="#" role="button">Reservar Paquete 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logo y descripción -->
+                <div class="col-md-4 text-center text-md-left">            
+                    <img class="logo" src="images/logo.png" alt="Logo" class="img-fluid mb-3" >
+                    
+                </div>
+
+                <!-- Accesos -->
+                <div class="col-md-3">
+                    <h5>Accesos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Reserva</a></li>
+                        <li><a href="#">Precios</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Horarios -->
+                <div class="col-md-3">
+                    <h5>Horarios</h5>
+                    <ul class="list-unstyled">
+                        <li>Lunes a Viernes: 7 am - 12 pm, 4 pm - 10 pm</li>
+                        <li>Sábados: 8 am - 12 pm</li>
+                        <li>Domingos: Cerrado</li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-md-2">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Whatsapp: xxxxxxx</li>
+                        <li>Correo: <a href="mailto:mova.studio23@gmail.com">MarStudioPilates@gmail.com</a></li>
+                        <li>Dirección: </li>
+                    </ul>
+                    <!-- Redes Sociales -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    
+                    <a href="https://wa.me/3112361679" target="_blank">
+                        <img src="ruta-del-icono" alt="Chat de WhatsApp">
+                      </a>
+                      
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace a Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://floating-whatsapp.js.org/dist/floating-wpp.min.js">
+        $(function() {
+      $('#myButton').floatingWhatsApp({
+        phone: 'tu-numero-de-whatsapp', 
+        popupMessage: '¡Hola! ¿Cómo puedo ayudarte?',
+        showPopup: true
+      });
+    });
+    </script>
+
+</body>
+
+</html>

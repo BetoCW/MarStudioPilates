@@ -1,0 +1,357 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f4f1; /* Fondo ligeramente más claro */
+    color: #876746; /* Color del texto en marrón oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezados de sección */
+h2 {
+    font-size: 26px;
+    color: #876746; /* Marrón oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    text-align: center;
+    color: #b19772; /* Marrón claro */
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #876746, #d6b8b2); /* Fondo degradado marrón y rosado */
+    color: #ffffff; /* Texto claro */
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.navbar-logo {
+    height: 50px; /* Ajustamos la altura para que encaje bien */
+    width: auto; /* Mantiene las proporciones de la imagen */
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alineamos la imagen al centro verticalmente con el texto */
+}
+
+.navbar .navbar-brand {
+    color: #ffffff; /* Color del logo o texto de la marca */
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-brand:hover {
+    color: #efe9e1; /* Hover más claro */
+}
+
+
+.navbar .nav-link {
+    color: #ffffff; /* Links de navegación */
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #f5f1ed; /* Hover más claro */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #f5f1ed; /* Resaltar el link activo */
+    font-weight: bold;
+}
+
+/* Hover y transiciones */
+.nav-link:hover {
+    color: #f5f1ed;
+    font-weight: bold;
+}
+
+/* Estilo del botón de menú en dispositivos móviles */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+}
+/* Estilo para mejorar la navegación en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background-color: #876746; /* Fondo marrón oscuro en pantallas pequeñas */
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 10px 15px;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #b19772; /* Color de hover en móviles */
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(100%); /* Cambiar el color del icono del menú a blanco */
+    }
+}
+
+/* Header/Jumbotron */
+.jumbotron {
+    background: linear-gradient(135deg, #d6b8b2, #efe9e1); /* Fondo degradado rosado suave */
+    color: #ffffff; /* Texto claro */
+    padding: 100px 20px; /* Mayor espaciado */
+    text-align: center; /* Centrar el texto */
+    border-radius: 0px; /* Bordes redondeados suaves */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron h1 {
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: 3px; /* Espaciado entre letras */
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.jumbotron p.lead {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.jumbotron .btn {
+    background-color: #ffffff; /* Fondo blanco para el botón */
+    border: none;
+    color: #876746; /* Texto marrón oscuro */
+    font-size: 18px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px; /* Botón más redondeado */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jumbotron .btn:hover {
+    background-color: #b19772; /* Hover marrón claro */
+    color: #ffffff; /* Texto claro en hover */
+}
+
+/* Efecto de fondo animado */
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 70%);
+    animation: pulse 8s infinite ease-in-out;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Ajuste de contenido del jumbotron */
+.jumbotron h1, .jumbotron p, .jumbotron .btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cards for Packages */
+.card {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levantar ligeramente al hacer hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-body h3 {
+    font-size: 24px;
+    color: #876746;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card-body .lead {
+    font-size: 20px;
+    color: #b19772;
+    margin-bottom: 20px;
+}
+
+.card-body .btn {
+    background-color: #876746;
+    border-color: #876746;
+    color: #efe9e1;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.card-body .btn:hover {
+    background-color: #b19772;
+    color: #000;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #efe9e1; /* Fondo claro */
+    color: #876746; /* Texto marrón oscuro */
+    padding: 40px 0;
+}
+
+.footer h5 {
+    color: #b19772; /* Títulos en marrón claro */
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer ul li a {
+    color: #876746; /* Links en marrón oscuro */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer ul li a:hover {
+    color: #d6b8b2; /* Hover en rosado suave */
+}
+
+.footer .social-icons a {
+    color: #876746; /* Iconos marrón oscuro */
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.footer .social-icons a:hover {
+    color: #d6b8b2; /* Hover en rosado suave */
+}
+
+.logo {
+    border-radius: 50%; /* Redondeo completo para hacer el logo circular */
+    width: 150px; /* Tamaño del logo */
+    height: 150px; /* Asegura que el logo sea cuadrado para que el redondeo sea simétrico */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño sin deformarse */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #876746;
+    border-color: #876746;
+    color: #efe9e1;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #b19772; /* Hover rosado suave */
+    border-color: #b19772;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: #d6b8b2;
+    border-color: #d6b8b2;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #b19772;
+    color: #000;
+}
+
+/* Estilo para el contenido principal */
+.container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container h2 {
+    font-size: 26px;
+    color: #876746; /* Títulos en marrón oscuro */
+}
+
+.container p {
+    color: #b19772; /* Texto en marrón claro */
+    line-height: 1.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar .nav-link {
+        font-size: 14px;
+    }
+
+    .card-body h3 {
+        font-size: 22px;
+    }
+
+    .jumbotron h1 {
+        font-size: 38px;
+    }
+
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
